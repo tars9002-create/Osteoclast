@@ -1,0 +1,26 @@
+name: repository-smoke
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Check repository package
+        run: python scripts/check_repository.py
+
+      - name: Compile Python files
+        shell: bash
+        run: |
+          git ls-files '*.py' -z | xargs -0 python -m py_compile

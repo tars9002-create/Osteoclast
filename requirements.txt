@@ -1,0 +1,69 @@
+# ============================================================================
+# Python dependencies for the osteoclast de novo discovery pipeline.
+# Target platform: Miyabi-G (aarch64 / NVIDIA GH200, CUDA 12.x). Python 3.10.
+#
+# The canonical, resilient installer is env/setup.sh (run on a compute node).
+# This file is a flat reference list for `pip install -r requirements.txt`.
+# NOTE: install torch FIRST from the CUDA wheel index, e.g.
+#   pip install torch --index-url https://download.pytorch.org/whl/cu126
+# ============================================================================
+
+# --- core scientific stack ---
+numpy<2.0
+scipy
+pandas
+scikit-learn
+statsmodels
+scikit-misc
+
+# --- plotting / IO ---
+matplotlib
+seaborn
+adjustText
+tqdm
+pyyaml
+h5py
+pyarrow
+joblib
+openpyxl
+
+# --- single-cell core ---
+anndata
+scanpy
+leidenalg
+igraph
+python-igraph
+harmonypy
+scrublet
+
+# --- deep-learning integration / label transfer ---
+# torch  -> install separately from the CUDA wheel index (see header)
+scvi-tools
+
+# --- trajectory / fate ---
+scvelo
+cellrank
+
+# --- TF / pathway activity, enrichment, cell-cell communication ---
+decoupler
+omnipath
+gseapy
+liana            # cell-cell communication (10_advanced/run_adv_A.py)
+
+# --- data access ---
+cellxgene-census
+
+# --- spatial / perturbation utilities (optional) ---
+squidpy
+pertpy
+
+# --- gene regulatory network + in-silico perturbation (the discovery engine) ---
+arboreto
+ctxcore
+pyscenic
+# celloracle     # OPTIONAL: does not build on aarch64; a Ridge-GRN reimplementation
+#                # in pipeline/04_modeling/insilico_perturb.py is used instead.
+
+# --- report rendering (09_report) ---
+markdown
+weasyprint
