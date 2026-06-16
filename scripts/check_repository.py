@@ -41,13 +41,16 @@ REQUIRED_PATHS = [
     "advanced/adv_helpers.py",
     "advanced/make_figs_v2.py",
     "report/pub_style.py",
-    "figures/main/G1_atlas.pdf",
-    "figures/main/G7_validation.pdf",
+    "figures/README.md",
+    "figures/main/.gitkeep",
+    "figures/supplementary/.gitkeep",
 ]
 
 FORBIDDEN_FILE_PATTERNS = [
     "*.docx",
     "*.zip",
+    "*.pdf",
+    "*.png",
     "*.h5ad",
     "*.h5",
     "*.pt",

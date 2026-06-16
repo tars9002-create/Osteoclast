@@ -4,8 +4,8 @@ Code and figure outputs for a single-cell analysis of a convergent invasive-reso
 osteoclast program across bone tumors.
 
 This repository is organized for manuscript review and release on GitHub. It contains
-the analysis scripts, environment notes, and manuscript figure exports. It does not
-include raw data, large intermediate `.h5ad` objects, manuscript documents, or local
+the analysis scripts and environment notes. It does not include raw data, generated
+manuscript figures, large intermediate `.h5ad` objects, manuscript documents, or local
 cluster outputs.
 
 ## Scientific Scope
@@ -160,7 +160,7 @@ python advanced/run_adv_B.py
 python advanced/make_figs_v2.py
 ```
 
-## Included Figure Exports
+## Figure Outputs
 
 | File stem | Paper figure | Content |
 |---|---|---|
@@ -173,8 +173,10 @@ python advanced/make_figs_v2.py
 | `figures/main/G7_validation` | Fig. 7 | Held-out and external validation. |
 | `figures/supplementary/F6_translation_novelty` | Supplementary figure | Translation/novelty summary panel exported with the manuscript figures. |
 
-PDF exports are tracked in this repository. PNG previews may be generated locally from the
-same figure scripts but are not tracked to keep the GitHub repository lightweight.
+Figure outputs are generated files and are not tracked in Git. Running
+`advanced/make_figs_v2.py` writes main figure PDFs and PNG previews to `figures/main/`.
+Supplementary figure exports should be regenerated or archived separately with the manuscript
+materials when needed.
 
 ## Notes for Reviewers
 

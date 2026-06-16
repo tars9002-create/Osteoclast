@@ -3,7 +3,7 @@
 ## Scope
 
 The repository is designed as a manuscript code record. It documents the end-to-end analysis
-workflow and includes final figure exports, but it does not bundle raw data or large generated
+workflow, but it does not bundle raw data, final figure exports, or large generated
 single-cell objects.
 
 ## Expected Compute

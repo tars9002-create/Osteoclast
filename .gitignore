@@ -52,8 +52,12 @@ report/figures/
 report/tables/*
 !report/tables/.gitkeep
 
-# ---- manuscript figure previews kept locally, not tracked ----
+# ---- generated manuscript figures kept locally, not tracked ----
 figures/**/*.png
+figures/**/*.pdf
+!figures/README.md
+!figures/main/.gitkeep
+!figures/supplementary/.gitkeep
 
 # ---- cluster spool / logs ----
 logs/
